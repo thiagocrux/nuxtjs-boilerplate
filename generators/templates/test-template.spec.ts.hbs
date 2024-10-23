@@ -1,0 +1,9 @@
+import { mountSuspended } from '@nuxt/test-utils/runtime';
+import { expect, it } from 'vitest';
+import {{pascalCase name}} from '@/components/{{pascalCase name}}.vue';
+
+it('should render the text', async () => {
+  const component = await mountSuspended({{pascalCase name}});
+  const wrapper = component.get('[data-testid="{{kebabCase name}}"]');
+  expect(wrapper).toBeTruthy();
+});
