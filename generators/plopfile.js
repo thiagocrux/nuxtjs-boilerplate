@@ -12,12 +12,12 @@ export default function(plop) {
       {
         type: 'add',
         path: '../src/components/{{pascalCase name}}.vue',
-        templateFile: 'templates/component-template.vue.hbs'
+        templateFile: 'templates/component.vue.hbs'
       },
       {
         type: 'add',
         path: '../src/__tests__/specs/components/{{pascalCase name}}.spec.ts',
-        templateFile: 'templates/test-template.spec.ts.hbs'
+        templateFile: 'templates/test.spec.ts.hbs'
       }
     ]
   })

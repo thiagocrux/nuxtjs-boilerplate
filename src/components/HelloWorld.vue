@@ -1,7 +1,13 @@
 <script lang="ts" setup>
-const foo = 'Hello, world!';
+interface Props {
+  text?: string;
+}
+
+withDefaults(defineProps<Props>(), {
+  text: 'Hello, world!',
+});
 </script>
 
 <template>
-  <div data-testid="foo">{{ foo }}</div>
+  <div data-testid="hello-world">{{ text }}</div>
 </template>
