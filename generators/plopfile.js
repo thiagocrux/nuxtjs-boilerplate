@@ -18,6 +18,11 @@ export default function(plop) {
         type: 'add',
         path: '../src/__tests__/specs/components/{{pascalCase name}}.spec.ts',
         templateFile: 'templates/test.spec.ts.hbs'
+      },
+      {
+        type: 'add',
+        path: '../src/__tests__/specs/components/{{pascalCase name}}.spec.ts',
+        templateFile: 'templates/test.spec.ts.hbs'
       }
     ]
   })

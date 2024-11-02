@@ -3,5 +3,10 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   srcDir: 'src/',
-  modules: ['@nuxt/eslint'],
+  modules: ['@nuxt/eslint', '@nuxtjs/storybook'],
+  vite: {
+    optimizeDeps: {
+      include: ['storybook > @storybook/core > jsdoc-type-pratt-parser'],
+    },
+  },
 });
