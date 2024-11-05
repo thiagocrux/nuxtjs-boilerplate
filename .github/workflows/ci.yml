@@ -12,6 +12,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
+          cache-dependency-path: subdir/package-lock.json
           cache: 'npm'
 
       - name: Install dependencies
