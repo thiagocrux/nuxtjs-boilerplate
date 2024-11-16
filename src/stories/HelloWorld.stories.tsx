@@ -6,7 +6,23 @@ const meta: Meta<typeof HelloWorld> = {
   title: 'HelloWorld',
   component: HelloWorld,
   argTypes: {
-    text: { control: 'text' },
+    text: {
+      type: 'string',
+      description: 'The text content',
+      table: { defaultValue: { summary: 'Hello, world!' } },
+    },
+    color: {
+      type: 'string',
+      control: 'select',
+      options: ['dark', 'light'],
+      description: 'The text color variant',
+      table: { defaultValue: { summary: 'dark' } },
+    },
+    isBold: {
+      type: 'boolean',
+      description: 'Is the font bold?',
+      table: { defaultValue: { summary: 'false' } },
+    },
   },
   tags: ['autodocs'],
 };
@@ -18,6 +34,8 @@ export const Default: Story = {
   name: 'Default',
   args: {
     text: 'Hello, world!',
+    color: 'dark',
+    isBold: false,
   },
 };
 
