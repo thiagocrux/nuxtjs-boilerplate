@@ -1,78 +1,180 @@
-# NuxtJS template
+# Nuxt.js Project Template
 
-This is a project template for a NuxtJS application with TypeScript, Tailwind, Storybook, Vitest, ESLint, Prettier and commit linters already configured.
+A template to kickstart a Nuxt.js project.
 
-## Setup
+## Technologies
 
-By default this project uses [pnpm](https://pnpm.io/) and you can run the command below to install all the dependencies.
+This template comes pre-configured with the following technologies:
+
+- `eslint`: A linting tool for JavaScript/TypeScript code.
+- `lint-staged`: Runs linters on Git staged files.
+- `plop`: A micro-generator framework that makes it easy to create code.
+- `prettier`: A code formatter.
+- `storybook`: A tool for developing UI components in isolation for React, Vue, and Angular.
+- `tailwindcss`: A utility-first CSS framework for rapidly building custom user interfaces.
+- `vitest`: A blazing fast unit testing framework powered by Vite, designed to provide a smooth and powerful testing experience.
+
+_For more information about other dependencies, see the `package.json` file._
+
+## Installation
+
+1. Create a new repository from the template:
 
 ```bash
+gh repo create your-new-repo-name --template thiagocrux/nuxtjs-template
+```
+
+2. Browse to the project folder:
+
+```bash
+cd your-project-folder
+```
+
+3. Install dependencies:
+
+```
 pnpm install
 ```
 
-## Scripts
+## Available scripts
 
-Start the development server on `http://localhost:3000`:
+This section describes the available scripts in the `package.json` file and their functionalities.
 
-```bash
-pnpm dev
-```
+### Development
 
-Build the application for production:
+- #### `dev`
 
-```bash
-pnpm build
-```
+  Starts the server in development mode using `nuxt dev`, enabling faster builds and live-reloading.
 
-Locally preview production build:
+  ```bash
+  pnpm dev
+  ```
 
-```bash
-pnpm preview
-```
+### Production
 
-The prepare command creates a .nuxt directory in your application and generates types:
+- #### `build`
 
-```bash
-pnpm postinstall
-```
+  Compiles the `nuxt` application for production.
 
-Search for errors and optionally fix them:
+  ```bash
+  pnpm build
+  ```
 
-```bash
-# Search for errors
-pnpm lint
+- #### `generate`
 
-# Search and fix the errors
-pnpm lint:fix
-```
+  Generates a static application from the `nuxt` project.
 
-Run tests:
+  ```bash
+  pnpm generate
+  ```
 
-```bash
-# Run tests
-pnpm test
+- #### `preview`
 
-# Run tests and check the coverage
-pnpm test:coverage
-```
+  Runs the generated static application for preview.
 
-Start storybook server on `http://localhost:6006`:
+  ```bash
+  pnpm preview
+  ```
 
-```bash
-pnpm storybook
-```
+- #### `postinstall`
 
-Build storybook for production:
+  Prepares the project after dependency installation.
 
-```bash
-pnpm build-storybook
-```
+  ```bash
+  pnpm postinstall
+  ```
 
-Auto generate a new component template files (component, test and story files):
+### Testing
 
-```bash
-pnpm generate:component
-```
+- #### `test`
+
+  Runs all tests using the `vitest` framework with parallel processing for better performance.
+
+  ```bash
+  pnpm test
+  ```
+
+- #### `test:coverage`
+
+  Executes tests and generates a code coverage report.
+
+  ```bash
+  pnpm test:coverage
+  ```
+
+- #### `test:ui`
+
+  Opens an interactive UI for managing and running tests.
+
+  ```bash
+  pnpm test:ui
+  ```
+
+### Code quality
+
+- #### `lint`
+
+  Analyzes your codebase for potential errors and style violations using `eslint`.
+
+  ```bash
+  pnpm lint
+  ```
+
+- #### `lint:fix`
+
+  Automatically fixes style issues and errors when possible.
+
+  ```bash
+  pnpm lint:fix
+  ```
+
+### Storybook
+
+- #### `storybook`
+
+  Starts the `storybook` server for developing UI components in isolation.
+
+  ```bash
+  pnpm storybook
+  ```
+
+- #### `storybook:build`
+
+  Builds the `storybook` application for production deployment.
+
+  ```bash
+  pnpm storybook:build
+  ```
+
+### Code generation
+
+- #### `generate:component`
+
+  Generates new components using `plop` with the specified `plopfile`.
+
+  ```bash
+  pnpm generate:component
+  ```
+
+### Git hooks
+
+- #### `prepare`
+
+  Automatically configures Git hooks (via `husky`) before each commit.
+
+  ```bash
+  pnpm prepare
+  ```
+
+## Useful links
+
+- [ESLint](https://eslint.org/)
+- [Nuxt](https://nuxt.com/)
+- [Plop](https://plopjs.com/)
+- [Storybook](https://storybook.js.org/)
+- [Tailwind](https://tailwindcss.com/)
+- [Vue Test Utils](https://test-utils.vuejs.org/)
+- [Vitest](https://vitest.dev/)
 
 ## License
 

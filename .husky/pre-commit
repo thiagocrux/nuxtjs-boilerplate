@@ -1,1 +1,1 @@
-pnpm precommit
+npx --no-install lint-staged

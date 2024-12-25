@@ -10,13 +10,13 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "vitest",
-    "test:coverage": "vitest --coverage",
-    "prepare": "husky",
-    "precommit": "lint-staged",
-    "generate:component": "npx plop --plopfile generators/plopfile.js",
     "storybook": "storybook dev --port 6006",
-    "build-storybook": "storybook build"
+    "storybook:build": "storybook build",
+    "test": "vitest --pool=forks",
+    "test:coverage": "vitest --coverage",
+    "test:ui": "vitest --ui",
+    "generate:component": "npx plop --plopfile generators/plopfile.js",
+    "prepare": "husky"
   },
   "dependencies": {
     "@nuxtjs/storybook": "^8.3.2",
